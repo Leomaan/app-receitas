@@ -1,4 +1,4 @@
-#App de receitas
+# App de receitas
 
 Projeto é desenvolver uma aplicação envolvendo alimentação, plataforma destinada para entusiastas da culinária, desde chefs renomados até cozinheiros iniciantes.
 
