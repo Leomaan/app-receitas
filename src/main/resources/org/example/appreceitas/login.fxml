@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.loginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.LoginController">
    <children>
       <Label layoutX="80.0" layoutY="14.0" prefHeight="34.0" prefWidth="205.0" text="Bem vindo de volta">
          <font>
@@ -25,13 +25,13 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="40.0" layoutY="187.0" prefHeight="26.0" prefWidth="285.0" />
-      <Label layoutX="40.0" layoutY="321.0" text="Senha">
+      <TextField fx:id="emailLogin" layoutX="40.0" layoutY="190.0" prefHeight="26.0" prefWidth="285.0" />
+      <Label layoutX="41.0" layoutY="280.0" text="Senha">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="40.0" layoutY="371.0" prefHeight="26.0" prefWidth="285.0" />
+      <TextField fx:id="senhaLogin" layoutX="40.0" layoutY="319.0" prefHeight="26.0" prefWidth="285.0" />
       <Label layoutX="144.0" layoutY="94.0" prefHeight="34.0" prefWidth="76.0" text="LOGIN">
          <font>
             <Font size="23.0" />
@@ -49,20 +49,20 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="424.0" layoutY="187.0" prefHeight="26.0" prefWidth="285.0" />
+      <TextField fx:id="nomeRegi" layoutX="418.0" layoutY="190.0" prefHeight="26.0" prefWidth="285.0" />
       <Label layoutX="418.0" layoutY="280.0" text="E-mail">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="418.0" layoutY="319.0" prefHeight="26.0" prefWidth="285.0" />
-      <Label layoutX="418.0" layoutY="438.0" text="Senha">
+      <TextField fx:id="emailRegi" layoutX="418.0" layoutY="319.0" prefHeight="26.0" prefWidth="285.0" />
+      <Label layoutX="418.0" layoutY="405.0" text="Senha">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="418.0" layoutY="476.0" prefHeight="26.0" prefWidth="285.0" />
-      <Button layoutX="157.0" layoutY="477.0" mnemonicParsing="false" text="Entrar" />
-      <Button layoutX="540.0" layoutY="538.0" mnemonicParsing="false" text="Criar" />
+      <TextField fx:id="senhaRegi" layoutX="418.0" layoutY="438.0" prefHeight="26.0" prefWidth="285.0" />
+      <Button fx:id="loginButton" layoutX="111.0" layoutY="434.0" mnemonicParsing="false" onAction="#login" prefHeight="61.0" prefWidth="142.0" text="Entrar" />
+      <Button fx:id="registerButton" layoutX="482.0" layoutY="493.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="168.0" text="Criar" />
    </children>
 </AnchorPane>
