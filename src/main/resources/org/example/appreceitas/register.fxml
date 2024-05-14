@@ -7,7 +7,8 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="760.0" style="-fx-background-color: #e19411;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.LoginController">
+
+<AnchorPane prefHeight="602.0" prefWidth="760.0" style="-fx-background-color: #e19411;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.RegisterController">
    <children>
       <AnchorPane layoutX="205.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="351.0" style="-fx-background-color: white;">
          <children>
@@ -17,34 +18,29 @@
                </font>
             </Label>
             <Circle fill="WHITE" layoutX="176.0" layoutY="47.0" radius="12.0" stroke="#e19411" strokeType="INSIDE" strokeWidth="4.0" />
-            <TextField fx:id="userLogin" layoutX="59.0" layoutY="213.0" prefHeight="34.0" prefWidth="233.0" promptText="Usuário">
+            <TextField fx:id="userCreate" layoutX="59.0" layoutY="213.0" prefHeight="34.0" prefWidth="233.0" promptText="Usuário">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <TextField fx:id="senhaLogin" layoutX="60.0" layoutY="270.0" prefHeight="34.0" prefWidth="233.0" promptText="Senha">
+            <TextField fx:id="senhaCreate" layoutX="60.0" layoutY="270.0" prefHeight="34.0" prefWidth="233.0" promptText="Senha">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <Button fx:id="buttonJoin" layoutX="117.0" layoutY="346.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="121.0" style="-fx-background-color: #e19411; -fx-cursor: OPEN_HAND;" text="Entrar" textFill="WHITE">
+            <Button fx:id="buttonCreate" layoutX="117.0" layoutY="346.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="121.0" style="-fx-background-color: #e19411; -fx-cursor: OPEN_HAND;" text="Criar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Label layoutX="104.0" layoutY="121.0" text="Bem vindo de volta!" textFill="#e19411">
+            <Label layoutX="115.0" layoutY="121.0" text="Seja, bem-vindo!" textFill="#e19411">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="85.0" layoutY="138.0" text="Faça seu login para continuar." textFill="#e19411">
+            <Label layoutX="93.0" layoutY="138.0" text="Registre-se para continuar." textFill="#e19411">
                <font>
                   <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="dontHave" layoutX="124.0" layoutY="406.0" style="-fx-cursor: OPEN_HAND;" text="Não possui conta?" textFill="#e19411">
-               <font>
-                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
          </children>
