@@ -22,14 +22,14 @@ public class App extends Application {
         FXMLLoader fxmlRegister = new FXMLLoader(App.class.getResource("register.fxml"));
         register = new Scene(fxmlRegister.load(), 760, 602);
 
+        LoginController loginController = fxmlLogin.getController();
+        loginController.setStage(stage);
 
-        stage.setScene(register);
+
+        stage.setScene(login);
         stage.show();
     }
 
-    public static void changeScream(String src){
-
-    }
 
     public static void main(String[] args) {
         launch();
