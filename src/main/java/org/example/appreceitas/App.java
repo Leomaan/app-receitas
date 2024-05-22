@@ -4,28 +4,52 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Usuario;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class App extends Application {
 
-
     private  static Scene login;
     private  static Scene register;
+    private static Scene app;
+    private static List<Usuario> usuarios = new ArrayList<>();
+
+    public static Scene getLoginScene() {
+
+        return login;
+    }
+    public static Scene getRegisterScene(){
+        return register;
+    }
+    public static Scene getAppScene(){
+        return app;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
-        stage.setTitle("Login");
 
         FXMLLoader fxmlLogin = new FXMLLoader(App.class.getResource("login.fxml"));
         login = new Scene(fxmlLogin.load(), 760, 602);
 
+        LoginController loginController = fxmlLogin.getController();
+        loginController.setStage(stage);
+        loginController.setUsers(usuarios);
+
         FXMLLoader fxmlRegister = new FXMLLoader(App.class.getResource("register.fxml"));
         register = new Scene(fxmlRegister.load(), 760, 602);
 
-        LoginController loginController = fxmlLogin.getController();
-        loginController.setStage(stage);
+        RegisterController registerController = fxmlRegister.getController();
+        registerController.setStage(stage);
+        registerController.setUsers(usuarios);
+
+        FXMLLoader fxmlPrincipal = new FXMLLoader(App.class.getResource("aplicativo.fxml"));
+        app = new Scene(fxmlPrincipal.load(), 760, 602);
 
 
+        stage.setTitle("Login");
         stage.setScene(login);
         stage.show();
     }
