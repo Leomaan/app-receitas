@@ -48,6 +48,8 @@ public class App extends Application {
         FXMLLoader fxmlPrincipal = new FXMLLoader(App.class.getResource("aplicativo.fxml"));
         app = new Scene(fxmlPrincipal.load(), 760, 602);
 
+        AplicativoController aplicativoController = fxmlPrincipal.getController();
+        aplicativoController.setStage(stage);
 
         stage.setTitle("Login");
         stage.setScene(login);

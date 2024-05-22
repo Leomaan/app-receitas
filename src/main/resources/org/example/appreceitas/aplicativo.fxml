@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="602.0" prefWidth="760.0" style="-fx-background-color: #e19411;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.AplicativoController">
    <children>
-      <AnchorPane layoutX="-7.0" layoutY="71.0" prefHeight="532.0" prefWidth="760.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutY="71.0" prefHeight="532.0" prefWidth="760.0" style="-fx-background-color: white;" />
       <Circle fill="#e19411" layoutX="55.0" layoutY="37.0" radius="16.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
       <Label layoutX="82.0" layoutY="20.0" text="Cooking" textFill="WHITE">
          <font>
@@ -18,6 +18,6 @@
       </Label>
       <Button layoutX="243.0" layoutY="25.0" mnemonicParsing="false" text="Receitas" />
       <ComboBox fx:id="tCombo" layoutX="354.0" layoutY="25.0" prefWidth="150.0" promptText="Tipos" />
-      <ComboBox fx:id="oCombo" layoutX="547.0" layoutY="25.0" onAction="#carregarTelaDaOcasiao" prefWidth="150.0" promptText="Ocasiões" />
+      <ComboBox fx:id="oCombo" layoutX="540.0" layoutY="25.0" prefWidth="150.0" promptText="Ocasiões" />
    </children>
 </AnchorPane>
