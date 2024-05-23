@@ -11,7 +11,6 @@ import model.Usuario;
 import java.util.List;
 
 
-
 public class RegisterController {
     @FXML
     private Button buttonCreate;
@@ -23,28 +22,36 @@ public class RegisterController {
     private TextField userCreate;
     private List<Usuario> usuarios;
     private Stage stage;
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
+    Alert alert;
 
    @FXML
     protected void registrar(ActionEvent e){
        String usernameNew = userCreate.getText();
        String senhaNew = senhaCreate.getText();
-       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-       alert.setTitle("Conta criada com sucesso!");
-       alert.setContentText("Agora faça seu login e entre no aplicativo, certo?");
-       alert.showAndWait();
+       if(usernameNew.isEmpty()||(senhaNew.isEmpty())){
+           alert = new Alert(Alert.AlertType.ERROR);
+           alert.setTitle("Erro ao tentar logar!");
+           alert.setContentText("Nenhum dos campos podem estar vazios!");
+           alert.showAndWait();
+       }else{
+           usuarios.add(new Usuario(usernameNew, senhaNew));
+           alert = new Alert(Alert.AlertType.CONFIRMATION);
+           alert.setTitle("Conta criada com sucesso!");
+           alert.setContentText("Agora faça seu login e entre no aplicativo, certo?");
+           alert.showAndWait();
 
-       usuarios.add(new Usuario(usernameNew, senhaNew));
-       stage.setScene(App.getLoginScene());
-       stage.setTitle("Login");
-       stage.show();
+           stage.setScene(App.getLoginScene());
+           stage.setTitle("Login");
+           stage.show();
+       }
+
    }
 
     public void setUsers(List<Usuario> usuarios) {
         this.usuarios = usuarios;
+    }
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 }
 

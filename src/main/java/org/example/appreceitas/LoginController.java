@@ -28,7 +28,6 @@ public class LoginController {
 
     private static Stage stage;
     private List<Usuario> usuarios;
-    private boolean entrou = false;
 
     @FXML
     protected void switchScene(ActionEvent e) throws IOException {   //Ao apertar o botao de não possuir conta, será redirecionado a tela de registrar.
@@ -46,16 +45,14 @@ public class LoginController {
                 stage.setScene(App.getAppScene());
                 stage.setTitle("Cooking");
                 stage.show();
-                entrou = true;
                 return;
             }
         }
-        if(!entrou){
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Não é póssivel continuar com o login!");
             alert.setContentText("Verifique novamente os campos ou crie uma conta caso não tenha!");
             alert.showAndWait();
-        }
     }
 
     public void setStage(Stage stage) {
