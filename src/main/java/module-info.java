@@ -5,4 +5,6 @@ module org.example.appreceitas {
 
     opens org.example.appreceitas to javafx.fxml;
     exports org.example.appreceitas;
+    exports org.example.appreceitas.Controllers;
+    opens org.example.appreceitas.Controllers to javafx.fxml;
 }

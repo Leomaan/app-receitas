@@ -2,13 +2,11 @@ package org.example.appreceitas.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.example.appreceitas.App;
 import org.example.appreceitas.model.Util.Alerts;
 import org.example.appreceitas.model.Usuario;
 import org.example.appreceitas.model.UsuarioDao;
@@ -40,10 +38,7 @@ public class RegisterController {
            boolean sucesso = UsuarioDao.registrarUsuario(usernameNew,senhaNew);
            if(sucesso){
                Alerts.alert("Conta criada com sucesso!","","Faça seu login agora para entrar no aplicativo!", Alert.AlertType.CONFIRMATION);
-               FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/appreceitas/Views/login.fxml"));
-               Parent root = loader.load();
-               Scene scene = new Scene(root);
-               stage.setScene(scene);
+               stage.setScene(App.getLoginScene());
                stage.setTitle("Entre");
                stage.show();
            }else{
@@ -51,12 +46,15 @@ public class RegisterController {
            }
        }
    }
-
     public void setUsersDao(UsuarioDao usuarioDao) {
         this.usuarioDao = usuarioDao;
     }
+
     public void setStage(Stage stage) {
         this.stage = stage;
+    }
+
+    public void setUsers(List<Usuario> usuarios) {
     }
 }
 

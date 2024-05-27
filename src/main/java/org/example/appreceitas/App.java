@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Usuario;
+import org.example.appreceitas.Controllers.AplicativoController;
+import org.example.appreceitas.Controllers.LoginController;
+import org.example.appreceitas.Controllers.RegisterController;
+import org.example.appreceitas.model.Usuario;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,7 +18,7 @@ public class App extends Application {
     private  static Scene login;
     private  static Scene register;
     private static Scene app;
-    private static List<Usuario> usuarios = new ArrayList<>();
+    private List<Usuario> usuarios = new ArrayList<>();
 
     public static Scene getLoginScene() {
 
