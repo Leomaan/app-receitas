@@ -13,7 +13,6 @@ import org.example.appreceitas.model.UsuarioDao;
 import java.io.IOException;
 import java.util.List;
 
-
 public class RegisterController {
     @FXML
     private Button buttonCreate;
@@ -27,7 +26,6 @@ public class RegisterController {
     private Stage stage;
     Alert alert;
     private UsuarioDao usuarioDao;
-
    @FXML
     protected void registrar(ActionEvent e) throws IOException {
        String usernameNew = userCreate.getText();

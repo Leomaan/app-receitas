@@ -9,8 +9,6 @@ import javafx.stage.Stage;
 import org.example.appreceitas.App;
 import org.example.appreceitas.model.Usuario;
 import org.example.appreceitas.model.UsuarioDao;
-
-
 import java.io.IOException;
 import java.util.List;
 

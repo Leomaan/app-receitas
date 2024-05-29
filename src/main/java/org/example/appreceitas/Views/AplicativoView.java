@@ -8,9 +8,6 @@ import javafx.fxml.FXMLLoader;
 
 public class AplicativoView {
     public class Main extends Application {
-        public static void main(String[] args) {
-            launch(args);
-        }
         @Override
         public void start(Stage stage) throws Exception {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/appreceitas/Views/aplicativo.fxml"));
@@ -19,6 +16,9 @@ public class AplicativoView {
             stage.setScene(scene);
             stage.setTitle("Cooking");
             stage.show();
+        }
+        public static void main(String[] args) {
+            launch(args);
         }
     }
 }

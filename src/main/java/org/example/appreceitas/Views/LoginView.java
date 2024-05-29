@@ -7,10 +7,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 public class LoginView {
+
     public class Main extends Application {
-        public static void main(String[] args) {
-            launch(args);
-        }
         @Override
         public void start(Stage stage) throws Exception {
             FXMLLoader fxmlLogin = new FXMLLoader(getClass().getResource("/org/example/appreceitas/Views/login.fxml"));
@@ -19,6 +17,9 @@ public class LoginView {
             stage.setScene(scene);
             stage.setTitle("Entre");
             stage.show();
+        }
+        public static void main(String[] args) {
+            launch(args);
         }
     }
 }

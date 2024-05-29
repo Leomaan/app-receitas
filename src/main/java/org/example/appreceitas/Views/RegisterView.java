@@ -7,9 +7,6 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 public class RegisterView {
     public class Main extends Application {
-        public static void main(String[] args) {
-            launch(args);
-        }
         @Override
         public void start(Stage stage) throws Exception {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/example/appreceitas/Views/register.fxml"));
@@ -18,6 +15,9 @@ public class RegisterView {
             stage.setScene(scene);
             stage.setTitle("Registre-se");
             stage.show();
+        }
+        public static void main(String[] args) {
+            launch(args);
         }
     }
 }

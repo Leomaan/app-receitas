@@ -11,7 +11,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AplicativoController implements Initializable {
-
     @FXML
     private ComboBox<String> oCombo;
     @FXML
@@ -29,9 +28,7 @@ public class AplicativoController implements Initializable {
     }
     @FXML
     public void goToreceitas(ActionEvent e){
-
     }
-
 
     public void setStage(Stage stage) {
         this.stage = stage;
