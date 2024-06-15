@@ -79,7 +79,7 @@
                         </Label>
                         <ImageView fitHeight="94.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
                            <VBox.margin>
-                              <Insets top="-15.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                            <image>
                               <Image url="@assets/laranja.jpg" />
@@ -143,7 +143,7 @@
                         </Label>
                         <ImageView fitHeight="101.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
                            <VBox.margin>
-                              <Insets top="-15.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                            <image>
                               <Image url="@assets/file.jpg" />
@@ -201,7 +201,7 @@
                         </Label>
                         <ImageView fitHeight="101.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
                            <VBox.margin>
-                              <Insets top="-15.0" />
+                              <Insets top="20.0" />
                            </VBox.margin>
                            <image>
                               <Image url="@assets/Strogonoff.png" />
