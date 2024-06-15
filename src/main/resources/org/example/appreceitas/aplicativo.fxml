@@ -60,7 +60,7 @@
                </textFill>
             </Label>
             <ComboBox fx:id="tCombo" layoutX="900.0" layoutY="14.0" prefWidth="150.0" promptText="Tipos" style="-fx-background-radius: 40; -fx-background-color: #e17211;" />
-            <Button fx:id="go" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" onAction="#setDados" prefHeight="25.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e17211; -fx-cursor: OPEN_HAND;" text="Atualizar Pagina" />
+            <Button fx:id="att" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" onAction="#setDados" prefHeight="25.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e17211; -fx-cursor: OPEN_HAND;" text="Atualizar Pagina" />
             <Button fx:id="modal" layoutX="443.0" layoutY="15.0" mnemonicParsing="false" onAction="#modal" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Adicionar Receita" />
             <Button fx:id="perfil" layoutX="1223.0" layoutY="14.0" mnemonicParsing="false" onAction="#entrarPerfil" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Perfil" />
             <Button fx:id="go" layoutX="1072.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Ir" />
@@ -68,7 +68,7 @@
       </AnchorPane>
       <VBox layoutX="2.0" layoutY="57.0" prefHeight="664.0" prefWidth="1280.0">
          <children>
-            <HBox fx:id="h1" prefHeight="149.0" prefWidth="1280.0">
+            <HBox prefHeight="149.0" prefWidth="1280.0">
                <children>
                   <VBox prefHeight="93.0" prefWidth="100.0">
                      <children>
@@ -132,7 +132,7 @@
                   <Insets top="2.0" />
                </padding>
             </HBox>
-            <HBox fx:id="h2" prefHeight="153.0" prefWidth="1003.0">
+            <HBox prefHeight="153.0" prefWidth="1003.0">
                <children>
                   <VBox prefHeight="117.0" prefWidth="107.0">
                      <children>
@@ -190,7 +190,7 @@
                   <Insets top="2.0" />
                </padding>
             </HBox>
-            <HBox fx:id="h2" prefHeight="155.0" prefWidth="1280.0">
+            <HBox prefHeight="155.0" prefWidth="1280.0">
                <children>
                   <VBox prefHeight="104.0" prefWidth="123.0">
                      <children>

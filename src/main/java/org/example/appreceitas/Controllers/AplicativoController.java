@@ -55,6 +55,8 @@ public class AplicativoController implements Initializable {
     @FXML
     private Button go;
     @FXML
+    private Button att;
+    @FXML
     private Button perfil;
     @FXML
     private Button modal;
