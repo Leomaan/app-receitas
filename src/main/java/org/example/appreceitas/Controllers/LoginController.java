@@ -42,20 +42,18 @@ public class LoginController {
     protected void login(ActionEvent e) throws IOException {
         String username = userLogin.getText();
         String senha = senhaLogin.getText();
-            if (UsuarioDao.verificarCredenciais(username,senha)) {
+        if (UsuarioDao.verificarCredenciais(username,senha)) {
                 stage.setScene(App.getAppScene());
                 stage.setTitle("Cooking");
                 stage.show();
                 return;
+            }else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Não é póssivel continuar com o login!");
+                alert.setContentText("Verifique novamente os campos ou crie uma conta caso não tenha!");
+                alert.showAndWait();
             }
-
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Não é póssivel continuar com o login!");
-            alert.setContentText("Verifique novamente os campos ou crie uma conta caso não tenha!");
-            alert.showAndWait();
     }
-
     public void setStage(Stage stage) {
         this.stage = stage;
     }

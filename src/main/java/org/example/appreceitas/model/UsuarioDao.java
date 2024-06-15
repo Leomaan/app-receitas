@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class UsuarioDao {
     private static List<Usuario> usuarios = new ArrayList<>();
+
     public static boolean verificarCredenciais(String username, String senha) {
         for (Usuario usuario : usuarios) {
             if (usuario.getUsername().equals(username) && usuario.getPassword().equals(senha)) {
@@ -12,6 +13,7 @@ public class UsuarioDao {
         }
         return false;
     }
+
     public static boolean registrarUsuario(String username, String senha) {
         for (Usuario usuario : usuarios) {
             if (usuario.getUsername().equals(username)) {
@@ -21,4 +23,5 @@ public class UsuarioDao {
         usuarios.add(new Usuario(username, senha));
         return true; // Usuário registrado com sucesso
     }
+
 }

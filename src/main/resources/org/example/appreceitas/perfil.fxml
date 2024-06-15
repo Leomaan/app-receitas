@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1280.0" style="-fx-background-color: #e19411;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.appreceitas.Controllers.PerfilController">
+   <children>
+      <AnchorPane prefHeight="55.0" prefWidth="1280.0" style="-fx-background-color: orange;">
+         <children>
+            <Circle fill="#e19411" layoutX="90.0" layoutY="28.0" radius="16.0" strokeType="INSIDE" strokeWidth="3.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+            <Label layoutX="116.0" layoutY="8.0" text="CookingBadPerfil">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.09004739336492891">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Button fx:id="voltar" layoutX="611.0" layoutY="16.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="58.0" style="-fx-background-radius: 50; -fx-background-color: #e17211; -fx-cursor: OPEN_HAND;" text="Voltar" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="98.0" layoutY="96.0" text="Receitas Criadas">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="855.0" layoutY="96.0" text="Receitas Favoritadas">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <HBox layoutX="8.0" layoutY="163.0" prefHeight="150.0" prefWidth="521.0">
+         <children>
+            <Label fx:id="NovaReceitaNome" prefHeight="17.0" prefWidth="160.0" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" top="50.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="150.0" prefWidth="213.0">
+               <children>
+                  <Label fx:id="ingredienteCriadaLabel" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="NovaReceitaIngrediente" prefHeight="131.0" prefWidth="220.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="190.0">
+               <children>
+                  <Label fx:id="preaparoCriadaLabel" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="NovaReceitaPreparo" prefHeight="131.0" prefWidth="131.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="676.0" layoutY="175.0" prefHeight="150.0" prefWidth="521.0">
+         <children>
+            <Label fx:id="favoritaNome" prefHeight="17.0" prefWidth="160.0" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" top="50.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="150.0" prefWidth="213.0">
+               <children>
+                  <Label fx:id="ingredientesLabelFavorita" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaIngredientes" prefHeight="131.0" prefWidth="220.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="190.0">
+               <children>
+                  <Label fx:id="preparoLabelFavorita" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaPreparo" prefHeight="131.0" prefWidth="131.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="685.0" layoutY="325.0" prefHeight="150.0" prefWidth="521.0">
+         <children>
+            <Label fx:id="favoritaNome1" prefHeight="17.0" prefWidth="160.0" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" top="50.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="150.0" prefWidth="213.0">
+               <children>
+                  <Label fx:id="ingredientesLabelFavorita1" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaIngredientes1" prefHeight="131.0" prefWidth="220.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="190.0">
+               <children>
+                  <Label fx:id="preparoLabelFavorita1" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaPreparo1" prefHeight="131.0" prefWidth="131.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="699.0" layoutY="475.0" prefHeight="150.0" prefWidth="521.0">
+         <children>
+            <Label fx:id="favoritaNome2" prefHeight="17.0" prefWidth="160.0" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" top="50.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="150.0" prefWidth="213.0">
+               <children>
+                  <Label fx:id="ingredientesLabelFavorita2" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaIngredientes2" prefHeight="131.0" prefWidth="220.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <HBox.margin>
+                  <Insets left="25.0" right="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="190.0">
+               <children>
+                  <Label fx:id="preparoLabelFavorita2" prefHeight="17.0" prefWidth="131.0" textAlignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="favoritaPreparo2" prefHeight="131.0" prefWidth="131.0" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
