@@ -12,6 +12,7 @@ import org.example.appreceitas.model.Receita;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PerfilController {
     @FXML
@@ -136,6 +137,4 @@ public class PerfilController {
             atualizarReceitaFav(receita.getNome(), receita.getIngredientes(), receita.getPassos(), receitasFavoritas.size() - 1);
         }
     }
-
-
 }

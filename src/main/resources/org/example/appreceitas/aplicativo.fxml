@@ -5,8 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -63,54 +61,46 @@
             <Button fx:id="att" layoutX="303.0" layoutY="14.0" mnemonicParsing="false" onAction="#setDados" prefHeight="25.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e17211; -fx-cursor: OPEN_HAND;" text="Atualizar Pagina" />
             <Button fx:id="modal" layoutX="443.0" layoutY="15.0" mnemonicParsing="false" onAction="#modal" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Adicionar Receita" />
             <Button fx:id="perfil" layoutX="1223.0" layoutY="14.0" mnemonicParsing="false" onAction="#entrarPerfil" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Perfil" />
-            <Button fx:id="go" layoutX="1072.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Ir" />
+            <Button fx:id="go" layoutX="1072.0" layoutY="14.0" mnemonicParsing="false" onAction="#filtrar" style="-fx-background-radius: 50; -fx-background-color: #e17211;" text="Ir" />
          </children>
       </AnchorPane>
       <VBox layoutX="2.0" layoutY="57.0" prefHeight="664.0" prefWidth="1280.0">
          <children>
             <HBox prefHeight="149.0" prefWidth="1280.0">
                <children>
-                  <VBox prefHeight="93.0" prefWidth="100.0">
+                  <VBox prefHeight="145.0" prefWidth="287.0">
                      <children>
-                        <Label fx:id="nomeReceita">
+                        <Label fx:id="nomeReceita" prefHeight="45.0" prefWidth="292.0">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="94.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                           <image>
-                              <Image url="@assets/laranja.jpg" />
-                           </image>
-                        </ImageView>
                      </children>
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="215.0" prefWidth="282.0">
+                  <VBox prefHeight="145.0" prefWidth="334.0">
                      <children>
-                        <Label text="Ingredientes">
+                        <Label fx:id="ingredientesLabel" text="Ingredientes">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ingredienteReceita" prefHeight="198.0" prefWidth="245.0" wrapText="true" />
+                        <Label fx:id="ingredienteReceita" prefHeight="128.0" prefWidth="362.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="215.0" prefWidth="323.0">
+                  <VBox prefHeight="145.0" prefWidth="397.0">
                      <children>
-                        <Label text="Preparo">
+                        <Label fx:id="preparoLabel" text="Preparo">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="preparoReceita" prefHeight="198.0" prefWidth="261.0" wrapText="true" />
+                        <Label fx:id="preparoReceita" prefHeight="128.0" prefWidth="373.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="60.0" />
@@ -134,47 +124,39 @@
             </HBox>
             <HBox prefHeight="153.0" prefWidth="1003.0">
                <children>
-                  <VBox prefHeight="117.0" prefWidth="107.0">
+                  <VBox prefHeight="149.0" prefWidth="290.0">
                      <children>
-                        <Label fx:id="nomeReceita1">
+                        <Label fx:id="nomeReceita1" prefHeight="45.0" prefWidth="291.0">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="101.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                           <image>
-                              <Image url="@assets/file.jpg" />
-                           </image>
-                        </ImageView>
                      </children>
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="215.0" prefWidth="282.0">
+                  <VBox prefHeight="149.0" prefWidth="338.0">
                      <children>
-                        <Label text="Ingredientes">
+                        <Label fx:id="ingredientesLabel1" text="Ingredientes">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ingredienteReceita1" prefHeight="198.0" prefWidth="245.0" wrapText="true" />
+                        <Label fx:id="ingredienteReceita1" prefHeight="132.0" prefWidth="452.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="215.0" prefWidth="323.0">
+                  <VBox prefHeight="149.0" prefWidth="394.0">
                      <children>
-                        <Label text="Preparo">
+                        <Label fx:id="preparoLabel1" text="Preparo">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="preparoReceita1" prefHeight="198.0" prefWidth="261.0" wrapText="true" />
+                        <Label fx:id="preparoReceita1" prefHeight="132.0" prefWidth="422.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="60.0" />
@@ -192,47 +174,39 @@
             </HBox>
             <HBox prefHeight="155.0" prefWidth="1280.0">
                <children>
-                  <VBox prefHeight="104.0" prefWidth="123.0">
+                  <VBox prefHeight="151.0" prefWidth="287.0">
                      <children>
-                        <Label fx:id="nomeReceita2">
+                        <Label fx:id="nomeReceita2" prefHeight="30.0" prefWidth="234.0">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="101.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
-                           <VBox.margin>
-                              <Insets top="20.0" />
-                           </VBox.margin>
-                           <image>
-                              <Image url="@assets/Strogonoff.png" />
-                           </image>
-                        </ImageView>
                      </children>
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="215.0" prefWidth="282.0">
+                  <VBox prefHeight="151.0" prefWidth="343.0">
                      <children>
-                        <Label text="Ingredientes">
+                        <Label fx:id="ingredientesLabel2" text="Ingredientes">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ingredienteReceita2" prefHeight="198.0" prefWidth="245.0" wrapText="true" />
+                        <Label fx:id="ingredienteReceita2" prefHeight="134.0" prefWidth="391.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="151.0" prefWidth="325.0">
+                  <VBox prefHeight="151.0" prefWidth="388.0">
                      <children>
-                        <Label text="Preparo">
+                        <Label fx:id="preparoLabel2" text="Preparo">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="preparoReceita2" prefHeight="134.0" prefWidth="314.0" wrapText="true" />
+                        <Label fx:id="preparoReceita2" prefHeight="134.0" prefWidth="380.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="60.0" />
@@ -251,11 +225,11 @@
             <Separator prefHeight="27.0" prefWidth="1280.0" />
             <HBox prefHeight="169.0" prefWidth="1280.0">
                <children>
-                  <VBox prefHeight="151.0" prefWidth="125.0">
+                  <VBox prefHeight="166.0" prefWidth="295.0">
                      <children>
-                        <Label fx:id="nomeReceita3">
+                        <Label fx:id="nomeReceita3" prefHeight="30.0" prefWidth="282.0">
                            <font>
-                              <Font name="System Bold" size="12.0" />
+                              <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
                      </children>
@@ -263,27 +237,27 @@
                         <Insets left="25.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="151.0" prefWidth="307.0">
+                  <VBox prefHeight="166.0" prefWidth="341.0">
                      <children>
                         <Label fx:id="labelIngrediente">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ingredienteReceita3" prefHeight="134.0" prefWidth="272.0" wrapText="true" />
+                        <Label fx:id="ingredienteReceita3" prefHeight="134.0" prefWidth="349.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="40.0" />
                      </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="153.0" prefWidth="253.0">
+                  <VBox prefHeight="166.0" prefWidth="391.0">
                      <children>
                         <Label fx:id="labelPreparo">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label fx:id="preparoReceita3" prefHeight="198.0" prefWidth="261.0" wrapText="true" />
+                        <Label fx:id="preparoReceita3" prefHeight="149.0" prefWidth="361.0" wrapText="true" />
                      </children>
                      <HBox.margin>
                         <Insets left="60.0" />

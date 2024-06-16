@@ -17,6 +17,8 @@ import java.util.List;
 
 public class NovaReceitaController {
     private Stage stage;
+    @FXML
+    private Button voltarButton;
     private Receita receita;
     @FXML
     private Button criarButton;
@@ -44,11 +46,17 @@ public class NovaReceitaController {
     private ReceitasDao receitasDao;
 
     @FXML
+    protected void retornar(ActionEvent e){
+        stage.setScene(App.getAppScene());
+        stage.setTitle("Cooking");
+        stage.show();
+    }
+    @FXML
     protected void criarReceita(ActionEvent e) throws IOException {
         NovaReceitaNome = nomeReceita.getText();
         NovaReceitaIngrediente = ingredientesReceita.getText();
         NovaReceitaPassos = passosReceita.getText();
-        aplicativoController.updateNovaReceita(NovaReceitaNome, NovaReceitaIngrediente, NovaReceitaPassos);
+        aplicativoController.novaReceitaAtt(NovaReceitaNome, NovaReceitaIngrediente, NovaReceitaPassos);
         perfilController.atualizarReceita(NovaReceitaNome, NovaReceitaIngrediente, NovaReceitaPassos);
         stage.setScene(App.getAppScene());
         stage.setTitle("Cooking");
