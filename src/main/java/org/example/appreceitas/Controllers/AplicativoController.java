@@ -88,9 +88,7 @@ public class AplicativoController implements Initializable {
     public void setPerfilController(PerfilController perfilController) {
         this.perfilController = perfilController;
     }
-    public AplicativoController() {
-        receitasDao = new ReceitasDao();
-    }
+
     @FXML
     private void setDados(ActionEvent e){
         Receita receita1 = new Receita();
@@ -191,26 +189,7 @@ public class AplicativoController implements Initializable {
             preparoLabel.setText("Preparo:");
             ingredientesLabel.setText("Ingredientes:");
         }
-        if (receitasFilter.size() > 1) {
-            clearReceitasDisplay();
-            Receita receita = receitasFilter.get(1);
-            nomeReceita1.setText(receita.getNome());
-            preparoReceita1.setText(receita.getPassos());
-            ingredienteReceita1.setText(receita.getIngredientes());
-            preparoLabel1.setText("Preparo:");
-            ingredientesLabel1.setText("Ingredientes:");
-        }
-        if (receitasFilter.size() > 2)
-        {   clearReceitasDisplay();
-            Receita receita = receitasFilter.get(2);
-            nomeReceita2.setText(receita.getNome());
-            preparoReceita2.setText(receita.getPassos());
-            ingredienteReceita2.setText(receita.getIngredientes());
-            preparoLabel2.setText("Preparo:");
-            ingredientesLabel2.setText("Ingredientes:");
-        }
     }
-
     private void clearReceitasDisplay() {
         nomeReceita.setText("");
         preparoReceita.setText("");
